@@ -1,13 +1,7 @@
 
 
 function App() {
-
-
-  return (
-    <>
-     hello janshop from frontend
-    </>
-  )
+  return <h1 className="text-3xl font-bold underline">Hello JanShop!</h1>;
 }
 
-export default App
+export default App;
