@@ -86,8 +86,13 @@ const Login = () => {
                         className="text-pink-500 hover:underline">Register</Link>
                     </p>
                 </div>
-
             </div>
+
+            <img
+                src="https://blenderartists.org/uploads/default/original/4X/5/9/4/594a14fa84264d9163eb46b77bc5dbcf3e708b68.jpeg"
+                alt=""
+                className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
+            />
 
         </section>
     </div>
