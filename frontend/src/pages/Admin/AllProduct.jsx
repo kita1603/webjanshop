@@ -33,7 +33,8 @@ const AllProducts = () => {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-[10rem] object-cover"
+                      className="w-[10rem] h-[14rem] object-cover rounded-custom" 
+                      style={{ borderRadius: "16px" }}
                     />
                     <div className="p-4 flex flex-col justify-around">
                       <div className="flex justify-between">
