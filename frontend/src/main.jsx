@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import "./index.css";
@@ -21,6 +21,9 @@ import CategoryList from './pages/Admin/CategoryList.jsx';
 import ProductList from "./pages/Admin/ProductList.jsx";
 import AllProducts from './pages/Admin/AllProduct.jsx';
 import ProductUpdate from './pages/Admin/ProductUpdate.jsx';
+import Home from './Home.jsx';
+
+import Favorites from './pages/Products/Favorites.jsx';
 
 
 
@@ -34,6 +37,8 @@ const router = createBrowserRouter(
         </Route>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route index={true} path='/' element={<Home/>}/>
+        <Route path='/favorite' element={<Favorites/>}/>
 
         {/* Admin Routes */}
         <Route path='/admin' element={<AdminRoute />}>
@@ -47,9 +52,10 @@ const router = createBrowserRouter(
   )
 )
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </Provider>
 );
+
+
