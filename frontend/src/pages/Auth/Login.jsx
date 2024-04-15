@@ -6,6 +6,13 @@ import { setCredentials } from "../../redux/features/auth/authSlice";
 import {toast} from "react-toastify";
 import Loader from "../../components/Loader.jsx";
 
+//sign in with google
+import {GoogleAuthProvider, signInWithPopup, getAuth, signInWithRedirect, getRedirectResult} from "firebase/auth";
+import app from "../../../firebaseConfig";
+
+
+
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -21,6 +28,8 @@ const Login = () => {
     const {search} = useLocation();
     const sp = new URLSearchParams(search);
     const redirect = sp.get('redirect') || '/';
+
+    const auth = getAuth(app);
 
     useEffect(() => {
         if (userInfo) {
@@ -38,8 +47,23 @@ const Login = () => {
         } catch (error) {
             toast.error(error?.data?.message || error.message);
         }
-    }
+    };
 
+    //google sign in
+    const signInWithGoogle = async () => {
+        try {
+            const provider = new GoogleAuthProvider();
+            // const res = await signInWithPopup(auth, provider);
+            const res = signInWithRedirect(auth, provider);
+
+            console.log(res.user);
+            const displayName = res.user;
+            toast.success(`Logged in as ${displayName}`);
+            dispatch(setCredentials({...res}));
+        } catch (error) {
+            toast.error(error?.data?.message || error.message);
+        }
+    };
 
     return <div>
         <section className="pl-[10rem] flex flex wrap">
@@ -86,6 +110,10 @@ const Login = () => {
                         className="text-pink-500 hover:underline">Register</Link>
                     </p>
                 </div>
+
+                {/* google sign in */}
+                <button onClick={signInWithGoogle} className="bg-red-600 text-white px-4 py-2 rounded cursor-pointer my-[1rem]">Sign In with Google</button>
+
             </div>
 
             <img
