@@ -40,7 +40,7 @@ const Cart = () => {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover rounded"
+                      className="w-full h-full object-cover rounded-lg"
                     />
                   </div>
 
@@ -85,13 +85,13 @@ const Cart = () => {
               <div className="mt-8 w-[40rem]">
                 <div className="p-4 rounded-lg">
                   <h2 className="text-xl font-semibold mb-2">
-                    Items ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                    Items ({cartItems.reduce((acc, item) => acc + Number(item.qty), 0)})
                   </h2>
 
                   <div className="text-2xl font-bold">
                     ${" "}
                     {cartItems
-                      .reduce((acc, item) => acc + item.qty * item.price, 0)
+                      .reduce((acc, item) => acc + Number(item.qty) * item.price, 0)
                       .toFixed(2)}
                   </div>
 
