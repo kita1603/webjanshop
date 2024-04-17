@@ -20,7 +20,7 @@ const Header = () => {
         <div className="xl:block lg:hidden md:hidden:sm:hidden">
           <div className="grid grid-cols-2">
             {data.map((product) => (
-              <div key={product._id}>
+              <div className="max-w-xs transition duration-300 ease-in-out hover:scale-105" key={product._id}>
                 <SmallProduct product={product} />
               </div>
             ))}

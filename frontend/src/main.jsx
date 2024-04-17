@@ -34,6 +34,7 @@ import Order from './pages/Orders/Order.jsx';
 import UserOrder from './pages/User/UserOrder.jsx';
 import OrderList from './pages/Admin/OrderList.jsx';
 import AdminDashboard from './pages/Admin/AdminDashboard.jsx';
+import About from './pages/About.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -54,6 +55,7 @@ const router = createBrowserRouter(
         <Route path='/placeorder' element={<PlaceOrder/>}/>
         <Route path='/order/:id' element={<Order/>}/>
         <Route path='/user-orders' element={<UserOrder/>}/>
+        <Route path='/about' element={<About/>}/> 
 
         {/* Admin Routes */}
         <Route path='/admin' element={<AdminRoute />}>

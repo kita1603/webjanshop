@@ -169,7 +169,7 @@ const Shop = () => {
                 <Loader />
               ) : (
                 products?.map((p) => (
-                  <div className="p-3" key={p._id}>
+                  <div className="p-3 transition duration-300 ease-in-out hover:scale-105" key={p._id}>
                     <ProductCard p={p} />
                   </div>
                 ))

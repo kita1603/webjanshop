@@ -4,7 +4,8 @@ import {
     AiOutlineShopping, 
     AiOutlineLogin, 
     AiOutlineUserAdd, 
-    AiOutlineShoppingCart
+    AiOutlineShoppingCart,
+    AiOutlineInfoCircle
 } from "react-icons/ai";
 import {FaHeart} from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -104,6 +105,15 @@ const Navigation = () => {
                 <FavoritesCount />
             
             </Link>
+
+            <Link
+                to="/about"
+                className="flex items-center transition-transform transform hover:translate-x-2"
+            >
+                <AiOutlineInfoCircle className="mr-2 mt-[3rem]" size={26}/>
+                <span className="hidden nav-item-name mt-[3rem]">About</span>{" "}
+            </Link>
+
         </div>
 
         <div className="relative">
