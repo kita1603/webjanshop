@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div className="container mx-auto px-4 py-8">
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-70 transition duration-300 ease-in-out hover:opacity-100 rounded-lg mb-5">
                 <img src="../../uploads/JanPerfume.png" alt="JanPerfume" className="rounded-lg shadow-lg w-1/4" />
             </div>
             <h1 className="text-2xl font-bold mb-4">Giới thiệu về Jan Perfume</h1>
