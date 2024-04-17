@@ -102,6 +102,20 @@ const Shipping = () => {
 
                 <span className="ml-2">PayPal or Credit Card</span>
               </label>
+
+            </div>
+            <div>
+              <label className="inline-flex items-center">
+                  <input
+                    type="radio"
+                    className="form-radio text-pink-500"
+                    name="paymentMethod"
+                    value="Cash on delivery"
+                    checked={paymentMethod === "Cash on delivery"}
+                    onChange={(e) => setPaymentMethod(e.target.value)}
+                  />
+                  <span className="ml-2">Cash on delivery</span>
+                </label>
             </div>
           </div>
 
