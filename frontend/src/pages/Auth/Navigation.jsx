@@ -64,7 +64,7 @@ const Navigation = () => {
                 className="flex items-center transition-transform transform hover:translate-x-2"
             >
                 <AiOutlineHome className="mr-2 mt-[3rem]" size={26}/>
-                <span className="hidden nav-item-name mt-[3rem]">HOME</span>{" "}
+                <span className="hidden nav-item-name mt-[3rem] neon-link">HOME</span>{" "}
             
             </Link>
 
@@ -73,7 +73,7 @@ const Navigation = () => {
                 className="flex items-center transition-transform transform hover:translate-x-2"
             >
                 <AiOutlineShopping className="mr-2 mt-[3rem]" size={26}/>
-                <span className="hidden nav-item-name mt-[3rem]">SHOP</span>{" "}
+                <span className="hidden nav-item-name mt-[3rem] neon-link">SHOP</span>{" "}
             
             </Link>
 
@@ -82,7 +82,7 @@ const Navigation = () => {
                 className="flex items-center transition-transform transform hover:translate-x-2"
             >
                 <AiOutlineShoppingCart className="mr-2 mt-[3rem]" size={26}/>
-                <span className="hidden nav-item-name mt-[3rem]">Cart</span>{" "}
+                <span className="hidden nav-item-name mt-[3rem] neon-link">Cart</span>{" "}
 
                 <div className="absolute top-9">
                     {cartItems.length > 0 && (
@@ -101,7 +101,7 @@ const Navigation = () => {
                 className="flex items-center transition-transform transform hover:translate-x-2"
             >
                 <FaHeart className="mr-2 mt-[3rem]" size={26}/>
-                <span className="hidden nav-item-name mt-[3rem]">Favorite</span>{" "}
+                <span className="hidden nav-item-name mt-[3rem] neon-link">Favorite</span>{" "}
                 <FavoritesCount />
             
             </Link>
@@ -111,7 +111,7 @@ const Navigation = () => {
                 className="flex items-center transition-transform transform hover:translate-x-2"
             >
                 <AiOutlineInfoCircle className="mr-2 mt-[3rem]" size={26}/>
-                <span className="hidden nav-item-name mt-[3rem]">About</span>{" "}
+                <span className="hidden nav-item-name mt-[3rem] neon-link">About</span>{" "}
             </Link>
 
         </div>
