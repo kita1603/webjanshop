@@ -48,9 +48,15 @@
     transition: 0.2s; */
     
   }
-  .neon-link:hover{
-    color: #feffff;
-    background: #4ba8f3;
-    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  @keyframes neon-burn {
+    0% { box-shadow: 0 0 10px #2a59b6, 0 0 20px #2a59b6, 0 0 30px #2a59b6}
+    50% { box-shadow: 0 0 40px #0483a6, 0 0 80px #0483a6, 0 0 120px #0483a6}
+    100% { box-shadow: 0 0 20px #117d9c, 0 0 40px #117d9c, 0 0 60px #117d9c}
+}
+
+.neon-link:hover {
+    animation: neon-burn 1s infinite alternate;
     border-radius: 8px;
 }
+
+
