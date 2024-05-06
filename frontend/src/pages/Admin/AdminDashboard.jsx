@@ -10,7 +10,6 @@ import { useState, useEffect } from "react";
 import AdminMenu from "./AdminMenu";
 import OrderList from "./OrderList";
 import Loader from "../../components/Loader";
-import "../Auth/Navigation.css";
 
 
 const AdminDashboard = () => {
@@ -96,7 +95,7 @@ const AdminDashboard = () => {
 
       <section className="xl:ml-[4rem] md:ml-[0rem]">
         <div className="w-[95%] flex justify-around flex-wrap">
-          <div className="rounded-lg bg-black p-5 w-[20rem] mt-5 neon-link"> 
+          <div className="rounded-lg bg-black p-5 w-[20rem] mt-5 neon-link neumorphism-title"> 
             <div className="font-bold rounded-lg w-[3rem] bg-pink-100 text-center p-3">
                 <img src="../../uploads/money.png" className="w-6 h-6" />
             </div>
@@ -106,7 +105,7 @@ const AdminDashboard = () => {
               $ {isLoading ? <Loader /> : sales.totalSales.toFixed(2)}
             </h1>
           </div>
-          <div className="rounded-lg bg-black p-5 w-[20rem] mt-5 neon-link"> 
+          <div className="rounded-lg bg-black p-5 w-[20rem] mt-5 neon-link neumorphism-title"> 
             <div className="font-bold rounded-lg w-[3rem] bg-pink-100 text-center p-3">
                 <img src="../../uploads/customer.png" className="w-6 h-6" />
             </div>
@@ -116,7 +115,7 @@ const AdminDashboard = () => {
               # {isLoading ? <Loader /> : customers?.length}
             </h1>
           </div>
-          <div className="rounded-lg bg-black p-5 w-[20rem] mt-5 neon-link"> 
+          <div className="rounded-lg bg-black p-5 w-[20rem] mt-5 neon-link neumorphism-title"> 
             <div className="font-bold rounded-lg w-[3rem] bg-pink-100 text-center p-3">
                 <img src="../../uploads/order.jpg" className="w-6 h-6" />
             </div>

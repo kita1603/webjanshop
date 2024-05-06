@@ -9,6 +9,8 @@ import Loader from "../../components/Loader.jsx";
 //sign in with google
 import {GoogleAuthProvider, signInWithPopup, getAuth, signInWithRedirect, getRedirectResult} from "firebase/auth";
 import app from "../../../firebaseConfig";
+import "../../index.css";
+
 
 
 
@@ -67,7 +69,7 @@ const Login = () => {
 
     return <div>
         <section className="pl-[10rem] flex flex wrap">
-            <div className="mr-[4rem] mt-[5rem]">
+            <div className="mr-[4rem] mt-[5rem] rounded-lg p-8 shadow-md backdrop-filter backdrop-blur-lg ">
                 <h1 className="text-2xl font-semibold mb-4">Sign In</h1>
                 <form onSubmit={submitHandler} className="container w-[40rem]">
                     <div className="my-[2rem]">
@@ -97,7 +99,7 @@ const Login = () => {
                     <button 
                         disabled={isLoading} 
                         type="submit" 
-                        className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem]">{isLoading ? "Signing in..." : "Sign In"}
+                        className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem] neumorphism-black">{isLoading ? "Signing in..." : "Sign In"}
                     </button>
 
                     {isLoading && <Loader />}
@@ -112,15 +114,19 @@ const Login = () => {
                 </div>
 
                 {/* google sign in */}
-                <button onClick={signInWithGoogle} className="bg-red-600 text-white px-4 py-2 rounded cursor-pointer my-[1rem]">Sign In with Google</button>
+                <button 
+                    onClick={signInWithGoogle} 
+                    className="neumorphism-black mt-5 ">Sign In with Google</button>
 
             </div>
+            <div className="absolute inset-0 z-[-1]">
+                <img
+                    src="https://blenderartists.org/uploads/default/original/4X/5/9/4/594a14fa84264d9163eb46b77bc5dbcf3e708b68.jpeg"
+                    alt=""
+                    className="h-[100%] w-[100%] object-cover"
+                />
+            </div>
 
-            <img
-                src="https://blenderartists.org/uploads/default/original/4X/5/9/4/594a14fa84264d9163eb46b77bc5dbcf3e708b68.jpeg"
-                alt=""
-                className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
-            />
 
         </section>
     </div>

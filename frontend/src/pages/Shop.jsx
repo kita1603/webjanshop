@@ -10,6 +10,7 @@ import {
 } from "../redux/features/shop/shopSlice";
 import Loader from "../components/Loader";
 import ProductCard from "./Products/ProductCard";
+import "./Page.css";
 
 const Shop = () => {
   const dispatch = useDispatch();
@@ -85,7 +86,7 @@ const Shop = () => {
       <div className="container mx-auto">
         <div className="flex md:flex-row">
           <div className="bg-[#151515] p-3 mt-2 mb-2">
-            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2">
+            <h2 className="text-center neumorphism-title">
               Lọc theo giới tính
             </h2>
 
@@ -111,7 +112,7 @@ const Shop = () => {
               ))}
             </div>
 
-            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2">
+            <h2 className="text-center neumorphism-title">
                 Lọc theo thương hiệu
             </h2>
 
@@ -138,11 +139,11 @@ const Shop = () => {
               ))}
             </div>
 
-            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2">
+            <h2 className="text-center neumorphism-title">
               Lọc theo giá
             </h2>
 
-            <div className="p-5 w-[15rem]">
+            <div className="p-5 w-[16rem]">
               <input
                 type="text"
                 placeholder="Nhập giá"
@@ -154,7 +155,7 @@ const Shop = () => {
 
             <div className="p-5 pt-0">
               <button
-                className="w-full border my-4"
+                className="neumorphism-black"
                 onClick={() => window.location.reload()}
               >
                 Reset

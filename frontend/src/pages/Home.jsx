@@ -15,7 +15,7 @@ const Home = () => {
       {isLoading ? (
         <Loader />
       ) : isError ? (
-        <Message variant="danger">
+        <Message variant="danger" className="mt-50">
           {isError?.data.message || isError.error}
         </Message>
       ) : (
@@ -27,7 +27,7 @@ const Home = () => {
 
             <Link
               to="/shop"
-              className="bg-pink-600 font-bold rounded-lg py-2 px-10 mr-[18rem] mt-[10rem]"
+              className="bg-pink-600 font-bold rounded-lg py-2 px-10 mr-[18rem] mt-[10rem] neumorphism-black"
             >
               Shop
             </Link>

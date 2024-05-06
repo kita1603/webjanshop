@@ -34,6 +34,8 @@
     transition: opacity 0.2s ease-in-out;
   }
 
+
+
   /* ne-on button */
   neon-link {
     /* position: relative;
@@ -55,8 +57,20 @@
 }
 
 .neon-link:hover {
+    color: #0ef;
     animation: neon-burn 1s infinite alternate;
     border-radius: 8px;
 }
 
+.neon-link:active {
+  color: #feffff;
+  background: #4ba8f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  border-radius: 8px;
+}
 
+neon-icon {
+  color: #0ef;
+  animation: neon-burn 1s infinite alternate;
+  border-radius: 8px; 
+}

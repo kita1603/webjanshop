@@ -124,7 +124,7 @@ const Register = () => {
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
+            className="neumorphism-black mb-5"
           >
             {isLoading ? "Registering..." : "Register"}
           </button>
@@ -147,7 +147,7 @@ const Register = () => {
       <img
         src="https://www.wildstone.in/cdn/shop/files/edge100ml_4.jpg?v=1707476845"
         alt=""
-        className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
+        className="h-[59rem] w-[50%] xl:block md:hidden sm:hidden rounded-lg"
       />
     </section>
   );

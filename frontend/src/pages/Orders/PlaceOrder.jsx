@@ -8,6 +8,7 @@ import Loader from "../../components/Loader";
 import { useCreateOrderMutation } from "../../redux/api/orderApiSlice";
 import { clearCartItems } from "../../redux/features/cart/cartSlice";
 
+
 const PlaceOrder = () => {
   const navigate = useNavigate();
 
@@ -68,7 +69,7 @@ const PlaceOrder = () => {
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-16 h-16 object-cover"
+                        className="w-16 h-16 object-cover rounded-lg"
                       />
                     </td>
 
@@ -128,7 +129,7 @@ const PlaceOrder = () => {
 
           <button
             type="button"
-            className="bg-pink-500 text-white py-2 px-4 rounded-full text-lg w-full mt-4"
+            className="neumorphism-black w-full mt-5"
             disabled={cart.cartItems === 0}
             onClick={placeOrderHandler}
           >

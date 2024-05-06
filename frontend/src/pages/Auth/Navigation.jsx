@@ -22,6 +22,16 @@ const Navigation = () => {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [showSidebar, setShowSidebar] = useState(false);
+    // const [activeIcon, setActiveIcon] = useState("");
+
+    // const handleIconClick = (icon) => {
+    //     setActiveIcon(icon);
+    // };
+    
+    // const iconClassName = (icon) =>
+    // icon === activeIcon ? "neon-icon" : "";
+
+
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -224,7 +234,7 @@ const Navigation = () => {
                             className="flex items-center transition-transform transform hover:translate-x-2"
                         >
                             <AiOutlineLogin className="mr-2 mt-[3rem]" size={26}/>
-                            <span className="hidden nav-item-name mt-[3rem]">LOGIN</span>{" "}
+                            <span className="hidden nav-item-name mt-[3rem]">Login</span>{" "}
                         
                         </Link>
                     </li>
@@ -235,7 +245,7 @@ const Navigation = () => {
                             className="flex items-center transition-transform transform hover:translate-x-2"
                         >
                             <AiOutlineUserAdd className="mr-2 mt-[3rem]" size={26}/>
-                            <span className="hidden nav-item-name mt-[3rem]">REGISTER</span>{" "}
+                            <span className="hidden nav-item-name mt-[3rem]">Register</span>{" "}
                         
                         </Link>
                     </li>
