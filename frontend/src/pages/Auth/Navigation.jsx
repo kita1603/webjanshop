@@ -5,7 +5,8 @@ import {
     AiOutlineLogin, 
     AiOutlineUserAdd, 
     AiOutlineShoppingCart,
-    AiOutlineInfoCircle
+    AiOutlineInfoCircle,
+    AiTwotoneDollarCircle
 } from "react-icons/ai";
 import {FaHeart} from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -114,6 +115,14 @@ const Navigation = () => {
                 <span className="hidden nav-item-name mt-[3rem] neon-link">Favorite</span>{" "}
                 <FavoritesCount />
             
+            </Link>
+
+            <Link
+                to="/crowdfunding"
+                className="flex items-center transition-transform transform hover:translate-x-2"
+            >
+                <AiTwotoneDollarCircle className="mr-2 mt-[3rem]" size={26}/>
+                <span className="hidden nav-item-name mt-[3rem] neon-link">Funding</span>{" "}
             </Link>
 
             <Link

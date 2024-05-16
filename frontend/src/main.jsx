@@ -35,6 +35,10 @@ import UserOrder from './pages/User/UserOrder.jsx';
 import OrderList from './pages/Admin/OrderList.jsx';
 import AdminDashboard from './pages/Admin/AdminDashboard.jsx';
 import About from './pages/About.jsx';
+import CrowdFunding from './pages/CrowdFunding.jsx';
+import { StateContextProvider } from './Context/index.jsx';
+
+import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,7 +59,8 @@ const router = createBrowserRouter(
         <Route path='/placeorder' element={<PlaceOrder/>}/>
         <Route path='/order/:id' element={<Order/>}/>
         <Route path='/user-orders' element={<UserOrder/>}/>
-        <Route path='/about' element={<About/>}/> 
+        <Route path='/about' element={<About/>}/>
+        <Route path='/crowdfunding' element={<CrowdFunding/>}/>  
 
         {/* Admin Routes */}
         <Route path='/admin' element={<AdminRoute />}>
@@ -72,12 +77,16 @@ const router = createBrowserRouter(
 )
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <PayPalScriptProvider>
-      <RouterProvider router={router} />
+  <ThirdwebProvider activeChain={'sepolia'} clientId='33368a44d48d22cf16a67de751c15cea'>
+    <StateContextProvider>
+      <Provider store={store}>
+        <PayPalScriptProvider>
+          <RouterProvider router={router} />
 
-    </PayPalScriptProvider>
-  </Provider>
+        </PayPalScriptProvider>
+      </Provider>
+    </StateContextProvider>
+  </ThirdwebProvider>
 );
 
 
