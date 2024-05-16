@@ -36,7 +36,10 @@ import OrderList from './pages/Admin/OrderList.jsx';
 import AdminDashboard from './pages/Admin/AdminDashboard.jsx';
 import About from './pages/About.jsx';
 import CrowdFunding from './pages/CrowdFunding.jsx';
-import { StateContextProvider } from './Context/index.jsx';
+import CreateCampaign from './pages/Campaigns/CreateCampaign.jsx';
+
+
+import { StateContextProvider } from './context/index.jsx';
 
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
 
@@ -60,7 +63,10 @@ const router = createBrowserRouter(
         <Route path='/order/:id' element={<Order/>}/>
         <Route path='/user-orders' element={<UserOrder/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/crowdfunding' element={<CrowdFunding/>}/>  
+
+        {/* web3 Routes */}
+        <Route path='/crowdfunding' element={<CrowdFunding/>}/>
+        <Route path='crowdfunding/create-campaign' element={<CreateCampaign/>}/>   
 
         {/* Admin Routes */}
         <Route path='/admin' element={<AdminRoute />}>

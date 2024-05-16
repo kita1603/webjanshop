@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { useStateContext } from '../Context';
+import { useStateContext } from '../context';
 import DisplayCampaigns from '../components/DisplayCampaigns';
+import Navbar from '../components/Navbar';
+
 
 const CrowdFunding = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,11 +24,15 @@ const CrowdFunding = () => {
   }, [address, contract]);
 
   return (
-    <DisplayCampaigns
-      title="All Campaigns"
-      isLoading={isLoading}
-      campaigns={campaigns}
-    />
+    <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5">
+        <Navbar/>
+
+        <DisplayCampaigns
+          title="All Campaigns"
+          isLoading={isLoading}
+          campaigns={campaigns}
+        />
+    </div>
 
 
   )
