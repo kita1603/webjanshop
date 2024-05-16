@@ -37,6 +37,7 @@ import AdminDashboard from './pages/Admin/AdminDashboard.jsx';
 import About from './pages/About.jsx';
 import CrowdFunding from './pages/CrowdFunding.jsx';
 import CreateCampaign from './pages/Campaigns/CreateCampaign.jsx';
+import CampaignDetails from './pages/Campaigns/CampaignDetails.jsx';
 
 
 import { StateContextProvider } from './context/index.jsx';
@@ -66,7 +67,8 @@ const router = createBrowserRouter(
 
         {/* web3 Routes */}
         <Route path='/crowdfunding' element={<CrowdFunding/>}/>
-        <Route path='crowdfunding/create-campaign' element={<CreateCampaign/>}/>   
+        <Route path='crowdfunding/create-campaign' element={<CreateCampaign/>}/>
+        <Route path='campaign-details/:id' element={<CampaignDetails/>}/>    
 
         {/* Admin Routes */}
         <Route path='/admin' element={<AdminRoute />}>

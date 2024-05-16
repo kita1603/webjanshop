@@ -10,7 +10,7 @@ const Home = () => {
   const { data, isLoading, isError } = useGetProductsQuery({ keyword });
 
   return (
-    <>
+    <div className="flex justify-center flex-col">
       {!keyword ? <Header /> : null}
       {isLoading ? (
         <Loader />
@@ -44,7 +44,7 @@ const Home = () => {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 };
 
