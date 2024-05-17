@@ -2,7 +2,13 @@
     width: 4%;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
+    /* transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); */
   }
+
+  #navigation-container.show {
+    transform: translateX(0);
+}
   
   #navigation-container:hover {
     width: 15%;
@@ -74,3 +80,25 @@ neon-icon {
   animation: neon-burn 1s infinite alternate;
   border-radius: 8px; 
 }
+
+/* .navigation-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  background-color: black;
+  color: white;
+  z-index: 9999;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navigation-container.hidden {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 1024px) {
+  .navigation-container {
+    transform: translateX(0);
+  }
+} */

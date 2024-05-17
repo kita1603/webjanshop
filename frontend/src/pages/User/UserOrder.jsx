@@ -34,7 +34,7 @@ const UserOrder = () => {
                 <img
                   src={order.orderItems[0].image}
                   alt={order.user}
-                  className="w-[6rem] mb-5"
+                  className="w-[6rem] mb-5 rounded-lg"
                 />
 
                 <td className="py-2">{order._id}</td>
@@ -67,7 +67,7 @@ const UserOrder = () => {
 
                 <td className="px-2 py-2">
                   <Link to={`/order/${order._id}`}>
-                    <button className="neumorphism-btn w-30">
+                    <button className="neumorphism-black w-30">
                       view Details
                     </button>
                   </Link>

@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 body {
-    background: #0f0e0ec2;
+    /* background: #0f0e0ec2; */
+    /* background: radial-gradient(circle at center, #0c0032, #1f004d, #1a0037, #000000); */
+    background: linear-gradient(to bottom, #565555, #2e2e2e, #0f0e0ec2);
+    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
+    /* background-image: url(https://e1.pxfuel.com/desktop-wallpaper/375/709/desktop-wallpaper-cool-backgrounds-unique-cool-backgrounds-7ea-unique-background.jpg); */
     color: #fff;
+
+    
+    /* Đảm bảo trang chiếm toàn bộ chiều cao trình duyệt */
+    min-height: 100vh;
+    margin: 0;
 }
 
 input, textarea {

@@ -61,13 +61,28 @@ const Navigation = () => {
         }
     }
 
+    // useEffect(() => {
+    //     const handleTouchStart = (e) => {
+    //       if (e.touches[0].clientX < 50) {
+    //         setShowSidebar(true);
+    //       }
+    //     };
+    
+    //     window.addEventListener("touchstart", handleTouchStart);
+    
+    //     return () => {
+    //       window.removeEventListener("touchstart", handleTouchStart);
+    //     };
+    //   }, []);
+
     return (
     <div       
         style={{ zIndex: 9999 }}
         className={`${
             showSidebar ? "hidden" : "flex"
-        } xl:flex lg:flex md:hidden sm:hidden flex-col justify-between p-4 text-white bg-black w-[4%] hover:w-[15%] h-[100vh]  fixed `}
+        } xl:flex lg:flex md:hidden sm:hidden flex-col justify-between p-4 text-white bg-black w-[4%] hover:w-[15%] h-[100vh] fixed sm:flex hidden mr-10`}
         id="navigation-container"
+        // className={`navigation-container ${showSidebar ? "" : "hidden"}`}
     >
         <div className="flex flex-col justify-center space-y-4">
             <Link
