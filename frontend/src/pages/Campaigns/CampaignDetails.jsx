@@ -43,12 +43,12 @@ const CampaignDetails = () => {
 
 
   return (
-    <div className='flex flex-col justify-center ml-[100px] mr-[5px]'>
+    <div className='flex flex-col justify-center mr-[5px] ml-[5px] sm:ml-[100px]'>
     {isLoading && <FundingLoader />}
 
     <div className="w-full flex md:flex-row flex-col mt-10 gap-[30px]">
       <div className="flex-1 flex-col">
-        <img src={state.image} alt="campaign" className="w-full h-[410px] object-cover rounded-xl"/>
+        <img src={state.image} alt="campaign" className="w-full h-[150px] sm:h-[410px] object-cover rounded-xl"/>
         <div className="relative w-full h-[5px] bg-[#3a3a43] mt-2">
           <div className="absolute h-full bg-[#4acd8d]" style={{ width: `${calculateBarPercentage(state.target, state.amountCollected)}%`, maxWidth: '100%'}}>
           </div>

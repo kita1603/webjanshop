@@ -21,11 +21,14 @@ const WalletProfile = () => {
   }, [address, contract]);
 
   return (
-    <DisplayCampaigns 
+    <div className='flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5'>
+        <DisplayCampaigns 
         title="All Campaigns"
         isLoading={isLoading}
         campaigns={campaigns}
-    />
+        />
+    </div>
+
   )
 }
 
