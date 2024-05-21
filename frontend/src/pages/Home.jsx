@@ -21,13 +21,13 @@ const Home = () => {
       ) : (
         <>
           <div className="flex justify-between items-center">
-            <h1 className="ml-[7rem] mt-[10rem] text-[3rem]">
+            <h1 className="ml-5 md:ml-[12rem] mt-[10rem] text-[3rem]">
               Special Products
             </h1>
 
             <Link
               to="/shop"
-              className="bg-pink-600 font-bold rounded-lg py-2 px-10 mr-[18rem] mt-[10rem] neumorphism-black"
+              className="bg-pink-600 font-bold rounded-lg py-2 px-10 md:mr-[18rem] mr-5 mt-[10rem] neumorphism-black"
             >
               Shop
             </Link>

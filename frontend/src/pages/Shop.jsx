@@ -84,16 +84,16 @@ const Shop = () => {
   return (
     <>
       <div className="container mx-auto">
-        <div className="flex md:flex-row">
-          <div className="bg-[#151515] p-3 mt-2 mb-2">
+        <div className="flex flex-col md:flex-row">
+          <div className="bg-[#151515] p-3 mt-2 mb-2 w-full md:w-auto">
             <h2 className="text-center neumorphism-title">
               Lọc theo giới tính
             </h2>
 
-            <div className="p-5 w-[15rem]">
+            <div className="p-5 w-full md:w-[15rem]">
               {categories?.map((c) => (
                 <div key={c._id} className="mb-2">
-                  <div className="flex ietms-center mr-4">
+                  <div className="flex items-center mr-4">
                     <input
                       type="checkbox"
                       id="red-checkbox"
@@ -113,29 +113,27 @@ const Shop = () => {
             </div>
 
             <h2 className="text-center neumorphism-title">
-                Lọc theo thương hiệu
+              Lọc theo thương hiệu
             </h2>
 
-            <div className="p-5">
+            <div className="p-5 w-full">
               {uniqueBrands?.map((brand) => (
-                <>
-                  <div className="flex items-enter mr-4 mb-5">
-                    <input
-                      type="radio"
-                      id={brand}
-                      name="brand"
-                      onChange={() => handleBrandClick(brand)}
-                      className="w-4 h-4 text-pink-400 bg-gray-100 border-gray-300 focus:ring-pink-500 dark:focus:ring-pink-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
+                <div key={brand} className="flex items-center mr-4 mb-5">
+                  <input
+                    type="radio"
+                    id={brand}
+                    name="brand"
+                    onChange={() => handleBrandClick(brand)}
+                    className="w-4 h-4 text-pink-400 bg-gray-100 border-gray-300 focus:ring-pink-500 dark:focus:ring-pink-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
 
-                    <label
-                      htmlFor="pink-radio"
-                      className="ml-2 text-sm font-medium text-white dark:text-gray-300"
-                    >
-                      {brand}
-                    </label>
-                  </div>
-                </>
+                  <label
+                    htmlFor={brand}
+                    className="ml-2 text-sm font-medium text-white dark:text-gray-300"
+                  >
+                    {brand}
+                  </label>
+                </div>
               ))}
             </div>
 
@@ -143,7 +141,7 @@ const Shop = () => {
               Lọc theo giá
             </h2>
 
-            <div className="p-5 w-[16rem]">
+            <div className="p-5 w-full md:w-[16rem]">
               <input
                 type="text"
                 placeholder="Nhập giá"
@@ -153,9 +151,9 @@ const Shop = () => {
               />
             </div>
 
-            <div className="p-5 pt-0">
+            <div className="p-5 pt-0 w-full">
               <button
-                className="neumorphism-black"
+                className="neumorphism-black w-full"
                 onClick={() => window.location.reload()}
               >
                 Reset
@@ -163,14 +161,17 @@ const Shop = () => {
             </div>
           </div>
 
-          <div className="p-3">
+          <div className="p-3 w-full">
             <h2 className="h4 text-center mb-2">{products?.length} Products</h2>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {products.length === 0 ? (
                 <Loader />
               ) : (
                 products?.map((p) => (
-                  <div className="p-3 transition duration-300 ease-in-out hover:scale-105" key={p._id}>
+                  <div
+                    className="p-3 transition duration-300 ease-in-out hover:scale-105 w-full md:w-auto"
+                    key={p._id}
+                  >
                     <ProductCard p={p} />
                   </div>
                 ))
