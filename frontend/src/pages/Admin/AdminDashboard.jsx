@@ -93,7 +93,7 @@ const AdminDashboard = () => {
     <>
       <AdminMenu />
 
-      <section className="xl:ml-[4rem] md:ml-[0rem]">
+      <section className="xl:ml-[4rem] md:ml-[0rem] bg-gray-500">
         <div className="w-[95%] flex justify-around flex-wrap">
           <div className="rounded-lg bg-black p-5 w-[20rem] mt-5 neon-link neumorphism-title"> 
             <div className="font-bold rounded-lg w-[3rem] bg-pink-100 text-center p-3">

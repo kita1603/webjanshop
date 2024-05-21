@@ -10,18 +10,18 @@ const Home = () => {
   const { data, isLoading, isError } = useGetProductsQuery({ keyword });
 
   return (
-    <div className="flex justify-center flex-col">
+    <div className="">
       {!keyword ? <Header /> : null}
       {isLoading ? (
         <Loader />
       ) : isError ? (
-        <Message variant="danger" className="mt-50">
+        <Message variant="danger">
           {isError?.data?.message || isError.error}
         </Message>
       ) : (
         <>
           <div className="flex justify-between items-center">
-            <h1 className="ml-[20rem] mt-[10rem] text-[3rem]">
+            <h1 className="ml-[7rem] mt-[10rem] text-[3rem]">
               Special Products
             </h1>
 

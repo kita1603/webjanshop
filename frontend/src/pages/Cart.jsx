@@ -24,6 +24,15 @@ const Cart = () => {
 
   return (
     <>
+      <div>
+        <Link
+          to="/shop"
+          className="text-white font-semibold hover:underline ml-[10rem]"
+        >
+          Go Back
+        </Link>
+      </div>
+
       <div className="container flex justify-around items-start flex wrap mx-auto mt-8">
         {cartItems.length === 0 ? (
           <div>

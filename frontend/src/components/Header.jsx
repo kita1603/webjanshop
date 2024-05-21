@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <>
       <div className="flex justify-around flex-row">
-        <div className="xl:block lg:hidden md:hidden:sm:hidden">
+        <div className="hidden sm:block">
           <div className="grid grid-cols-2">
             {data.map((product) => (
               <div className="max-w-xs transition duration-300 ease-in-out hover:scale-105" key={product._id}>
@@ -26,7 +26,7 @@ const Header = () => {
             ))}
           </div>
         </div>
-        <ProductCarousel />
+          <ProductCarousel />
       </div>
     </>
   );

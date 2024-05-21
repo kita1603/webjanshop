@@ -61,20 +61,6 @@ const Navigation = () => {
         }
     }
 
-    // useEffect(() => {
-    //     const handleTouchStart = (e) => {
-    //       if (e.touches[0].clientX < 50) {
-    //         setShowSidebar(true);
-    //       }
-    //     };
-    
-    //     window.addEventListener("touchstart", handleTouchStart);
-    
-    //     return () => {
-    //       window.removeEventListener("touchstart", handleTouchStart);
-    //     };
-    //   }, []);
-
     return (
     <div       
         style={{ zIndex: 9999 }}
