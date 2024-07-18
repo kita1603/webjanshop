@@ -7,7 +7,7 @@ const About = () => {
                 <img src="../../uploads/JanPerfume.png" alt="JanPerfume" className="rounded-lg shadow-lg w-1/4" />
             </div>
             <h1 className="text-2xl font-bold mb-4">Giới thiệu về Jan Perfume</h1>
-            <h1 className="text-2xl font-bold mb-4"> Welcome to Jan Perfume Shop</h1>
+            <h1 className="text-2xl font-bold mb-4">Welcome to Jan Perfume Shop</h1>
             <ul className="list-disc pl-5">
                 <li>JanPerfume là địa chỉ tin cậy dành cho những người yêu nước hoa cao cấp. Chúng tôi tự hào mang đến cho khách hàng một sự lựa chọn đa dạng về hương thơm để phù hợp với mọi phong cách và dịp đặc biệt.</li>
                 <li>Được thành lập từ năm 10-2023, JanPerfume đã cung cấp cho khách hàng những hương thơm sang trọng và lưu lại ấn tượng lâu dài. Đội ngũ của chúng tôi cam kết hỗ trợ bạn tìm kiếm hương thơm hoàn hảo để thể hiện cá tính của mình và khiến bạn cảm thấy tự tin và xinh đẹp.</li>
