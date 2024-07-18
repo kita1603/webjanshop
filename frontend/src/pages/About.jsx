@@ -6,7 +6,7 @@ const About = () => {
             <div className="mt-8 flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-70 transition duration-300 ease-in-out hover:opacity-100 rounded-lg mb-5">
                 <img src="../../uploads/JanPerfume.png" alt="JanPerfume" className="rounded-lg shadow-lg w-1/4" />
             </div>
-            <h1 className="text-2xl font-bold mb-4">Giới thiệu về Jan Perfume</h1>
+            <h1 className="text-2xl font-bold mb-4">Giới thiệu về Jan Perfume Shop</h1>
             <h1 className="text-2xl font-bold mb-4">Welcome to Jan Perfume Shop</h1>
             <ul className="list-disc pl-5">
                 <li>JanPerfume là địa chỉ tin cậy dành cho những người yêu nước hoa cao cấp. Chúng tôi tự hào mang đến cho khách hàng một sự lựa chọn đa dạng về hương thơm để phù hợp với mọi phong cách và dịp đặc biệt.</li>
