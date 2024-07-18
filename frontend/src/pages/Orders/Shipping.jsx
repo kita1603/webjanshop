@@ -66,11 +66,11 @@ const Shipping = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-white mb-2">Postal Code</label>
+            <label className="block text-white mb-2">Phone Number</label>
             <input
               type="text"
               className="w-full p-2 border rounded"
-              placeholder="Enter postal code"
+              placeholder="Enter phone number"
               value={postalCode}
               required
               onChange={(e) => setPostalCode(e.target.value)}

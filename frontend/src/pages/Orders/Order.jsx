@@ -157,8 +157,13 @@ const Order = () => {
 
           <p className="mb-4">
             <strong className="text-pink-500">Address:</strong>{" "}
-            {order.shippingAddress.address}, {order.shippingAddress.city}{" "}
-            {order.shippingAddress.postalCode}, {order.shippingAddress.country}
+            {order.shippingAddress.address}, {order.shippingAddress.city}
+          , {order.shippingAddress.country}
+          </p>
+
+          <p className="mb-4">
+            <strong className="text-pink-500">Phone:</strong>{" "}
+            {order.shippingAddress.postalCode}
           </p>
 
           <p className="mb-4">

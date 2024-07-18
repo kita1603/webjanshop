@@ -27,7 +27,7 @@ const Cart = () => {
       <div>
         <Link
           to="/shop"
-          className="text-white font-semibold hover:underline ml-[10rem]"
+          className="text-white font-semibold hover:underline ml-[2rem] md:ml-[10rem]"
         >
           Go Back
         </Link>
@@ -53,7 +53,7 @@ const Cart = () => {
                     />
                   </div>
 
-                  <div className="flex-1 ml-4">
+                  <div className="flex-1 mt-2 md:mt-0 md:ml-4 text-center md:text-left">
                     <Link to={`/product/${item._id}`} className="text-pink-500">
                       {item.name}
                     </Link>
