@@ -41,7 +41,7 @@ import CampaignDetails from './pages/Campaigns/CampaignDetails.jsx';
 import WalletProfile from './pages/Campaigns/WalletProfile.jsx';
 
 
-import { StateContextProvider } from './Context/index.jsx';
+import { StateContextProvider } from './context/index.jsx';
 
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
 
