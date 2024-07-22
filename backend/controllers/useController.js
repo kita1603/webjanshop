@@ -65,6 +65,35 @@ const loginUser = asyncHandler(async (req, res) => {
     }
 });
 
+const loginGoogle = asyncHandler(async (req, res) => {
+    const { googleId, email, username } = req.body;
+    let user = await User.findOne({ email });
+
+    if (!user) {
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(googleId, salt);
+
+        user = new User({
+            username: username,
+            email: email,
+            password: hashedPassword,
+            isAdmin: false, 
+        });
+
+        await user.save();
+    }
+
+    createToken(res, user._id);
+
+    res.status(201).json({
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        isAdmin: user.isAdmin,
+    });
+
+});
+
 const logoutCurrentUser = asyncHandler(async (req, res) => {
     res.cookie('jwt', '', {
         httpOnly: true,
@@ -173,7 +202,8 @@ const updateUserById = asyncHandler(async (req, res) => {
 
 export {
     createUser, 
-    loginUser, 
+    loginUser,
+    loginGoogle, 
     logoutCurrentUser, 
     getAllUsers, 
     getCurrentUserProfile, 
