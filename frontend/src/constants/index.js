@@ -7,20 +7,20 @@ export const navlinks = [
     link: '/crowdfunding',
   },
   {
-    name: 'Campaign',
+    name: 'Home',
     imgUrl: createCampaign,
-    link: '/create-campaign',
+    link: '/',
   },
   {
-    name: 'Payment',
+    name: 'Shop',
     imgUrl: payment,
-    link: '/',
-    disabled: true,
+    link: '/Shop',
+    // disabled: true,
   },
   {
-    name: 'Withdraw',
+    name: 'Cart',
     imgUrl: withdraw,
-    link: '/',
+    link: '/Cart',
     disabled: true,
   },
   {

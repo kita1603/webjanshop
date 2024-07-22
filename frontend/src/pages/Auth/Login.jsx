@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
-import { useLoginMutation } from "../../redux/api/usersApiSlice";
+import { useLoginMutation, useLoginGoogleMutation } from "../../redux/api/usersApiSlice";
 import { setCredentials } from "../../redux/features/auth/authSlice";
 import {toast} from "react-toastify";
 import Loader from "../../components/Loader.jsx";
@@ -24,6 +24,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const [login, {isLoading}] = useLoginMutation();
+    const [loginGoogle, {isGoogleLoading}] = useLoginGoogleMutation();
     
     const {userInfo} = useSelector(state => state.auth);
 
@@ -55,13 +56,20 @@ const Login = () => {
     const signInWithGoogle = async () => {
         try {
             const provider = new GoogleAuthProvider();
-            // const res = await signInWithPopup(auth, provider);
-            const res = signInWithRedirect(auth, provider);
+            const res = await signInWithPopup(auth, provider);
+            // const res = signInWithRedirect(auth, provider);
+            const user = {
+                googleId: res.user.uid,
+                email: res.user.email,
+                username: res.user.displayName,
+            };
+            const googleRes = await loginGoogle(user).unwrap();
+
 
             console.log(res.user);
-            const displayName = res.user;
+            const displayName = res.user.displayName;
             toast.success(`Logged in as ${displayName}`);
-            dispatch(setCredentials({...res}));
+            dispatch(setCredentials({...googleRes}));
         } catch (error) {
             toast.error(error?.data?.message || error.message);
         }
