@@ -9,6 +9,17 @@ const Home = () => {
   const { keyword } = useParams();
   const { data, isLoading, isError } = useGetProductsQuery({ keyword });
 
+  const logos = [
+    "../../uploads/pdm.webp",
+    "../../uploads/tom-ford.webp",
+    "../../uploads/Wild_Stone.webp",
+    "../../uploads/xerjoff.webp",
+    "../../uploads/creed.png",
+    "../../uploads/victoria_secret.png",
+    "../../uploads/JanPerfume_logo.PNG",
+    "../../uploads/slp.jpeg",
+  ];
+
   return (
     <div className="">
       {!keyword ? <Header /> : null}
@@ -20,6 +31,15 @@ const Home = () => {
         </Message>
       ) : (
         <>
+          {/* Logo Slider */}
+          <div className="logo-slider-container mt-20">
+            <div className="logo-slider">
+              {logos.concat(logos).map((src, index) => (
+                <img src={src} alt={`Brand ${index + 1}`} key={index} />
+              ))}
+            </div>
+          </div>
+
           <div className="flex justify-between items-center">
             <h1 className="ml-5 md:ml-[12rem] mt-[10rem] text-[3rem]">
               Special Products
@@ -42,6 +62,9 @@ const Home = () => {
               ))}
             </div>
           </div>
+
+
+
         </>
       )}
     </div>

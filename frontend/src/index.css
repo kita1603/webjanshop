@@ -20,5 +20,49 @@ input, textarea {
     color: #000;
 }
 
+.logo-slider-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px 0;
+    background-color: white; /* Adjust background color as needed */
+    position: relative;
+  }
+  
+  .logo-slider {
+    display: flex;
+    animation: slide 35s linear infinite;
+  }
+  
+  .logo-track {
+    display: flex;
+    width: 200%;
+  }
+  
+  .slide {
+    display: flex;
+    flex-shrink: 0;
+  }
+  
+  .logo-slider img {
+    height: 75px;
+    margin: 0 20px;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }  
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  
 
   
