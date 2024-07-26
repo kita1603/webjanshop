@@ -72,6 +72,14 @@ const createOrder = async (req, res) => {
     });
 
     const createdOrder = await order.save();
+
+    //update instock
+    for (const item of dbOrderItems) {
+      const product = await Product.findById(item.product);
+      product.countInStock -= item.qty;
+      await product.save();
+    }
+
     res.status(201).json(createdOrder);
   } catch (error) {
     res.status(500).json({ error: error.message });
